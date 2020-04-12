@@ -13,9 +13,10 @@ import { User } from "./Model/user";
 /* Servicios */
 import { UserService } from "./Services/user.service";
 import { NavPageService } from "./Services/nav-page.service";
+import { CreateGroupComponent } from './create-group/create-group.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, CreateGroupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
