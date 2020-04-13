@@ -3,7 +3,7 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
-  AbstractControl
+  AbstractControl,
 } from "@angular/forms";
 import { UserService } from "src/app/Services/user.service";
 import { Router } from "@angular/router";
@@ -14,7 +14,7 @@ import { NavPageService } from "../Services/nav-page.service";
 @Component({
   selector: "app-register",
   templateUrl: "./register.component.html",
-  styleUrls: ["./register.component.css"]
+  styleUrls: ["./register.component.css"],
 })
 export class RegisterComponent implements OnInit {
   public registerForm: FormGroup;
@@ -45,18 +45,18 @@ export class RegisterComponent implements OnInit {
         Name: ["", [Validators.required, Validators.minLength(3)]],
         Email: [
           "",
-          [Validators.required, Validators.minLength(6), Validators.email]
-        ]
+          [Validators.required, Validators.minLength(6), Validators.email],
+        ],
       });
     } else {
       this.registerForm = this.formBuilder.group({
         Name: ["", [Validators.required, Validators.minLength(3)]],
         Email: [
           "",
-          [Validators.required, Validators.minLength(6), Validators.email]
+          [Validators.required, Validators.minLength(6), Validators.email],
         ],
         Password: ["", [Validators.required, Validators.minLength(8)]],
-        passwordRepeat: ["", [Validators.required, Validators.minLength(8)]]
+        passwordRepeat: ["", [Validators.required, Validators.minLength(8)]],
       });
     }
     /* this.fillFormToEdit(); */
@@ -75,6 +75,7 @@ export class RegisterComponent implements OnInit {
     this.ajax = true;
     delete this.registerForm.value.passwordRepeat;
     let user = this.registerForm.value;
+    user.Rol = "Student";
     let response = <User>await this.usrService.add(user).toPromise();
     /*  this.menuUser = <Menu>(
       await this.usrService.getRolMenuRest(response.Rol).toPromise()

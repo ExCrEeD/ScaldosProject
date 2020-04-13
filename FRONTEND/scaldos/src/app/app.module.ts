@@ -11,22 +11,31 @@ import { RegisterComponent } from "./register/register.component";
 /* Modelos */
 import { User } from "./Model/user";
 import { Group } from "./Model/group";
+import { Menu } from "./Model/Menu";
+
 /* Servicios */
 import { UserService } from "./Services/user.service";
 import { GroupService } from "./Services/group.service";
 import { NavPageService } from "./Services/nav-page.service";
-import { CreateGroupComponent } from './create-group/create-group.component';
+import { CreateGroupComponent } from "./create-group/create-group.component";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, CreateGroupComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    CreateGroupComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [User, Group, NavPageService, UserService, GroupService],
-  bootstrap: [AppComponent]
+  providers: [User, Group, Menu, NavPageService, UserService, GroupService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
