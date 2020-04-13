@@ -10,8 +10,10 @@ import { RegisterComponent } from "./register/register.component";
 
 /* Modelos */
 import { User } from "./Model/user";
+import { Group } from "./Model/group";
 /* Servicios */
 import { UserService } from "./Services/user.service";
+import { GroupService } from "./Services/group.service";
 import { NavPageService } from "./Services/nav-page.service";
 import { CreateGroupComponent } from './create-group/create-group.component';
 
@@ -24,7 +26,7 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [User, NavPageService, UserService],
+  providers: [User, Group, NavPageService, UserService, GroupService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
