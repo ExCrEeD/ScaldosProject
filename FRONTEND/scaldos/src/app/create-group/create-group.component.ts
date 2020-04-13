@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {GroupService} from '../services/group.service';
+import {FormGroup,FormBuilder,Validators} from '@angular/forms';
+import {Group} from '../Model/group';
 
 @Component({
   selector: 'app-create-group',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateGroupComponent implements OnInit {
 
-  constructor() { }
+  private group: Group;
+  public createGroupForm: FormGroup;
+
+  constructor(
+    private formBuilder : FormBuilder,
+    private groupservice : GroupService
+  ) { }
 
   ngOnInit(): void {
+    this.createGroupForm=this.formBuilder.group({
+      Name: ["",Validators.required],
+      Description: ["",Validators.required]
+    });
+  }
+  async createGroup(){
+    let group = this.createGroupForm.value;
+    let response = <Group> await this.groupservice.add(group).toPromise();
+    alert("Grupo Registrado Correctamente");
   }
 
 }
