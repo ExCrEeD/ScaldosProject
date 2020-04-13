@@ -1,4 +1,9 @@
-<form [formGroup]="registerForm" novalidate class="">
+<div class="d-flex align-items-center justify-content-center px-md-1 px-1 mt-1 ">
+<form 
+  [formGroup]="registerForm" 
+  novalidate 
+  class="registerForm animated bounceInDown justify-content: center"
+  >
   <div [class.loginContent]="!this.switchForm">
     <p
       [class.titleForm]="!this.switchForm"
