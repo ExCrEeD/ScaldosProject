@@ -1,0 +1,102 @@
+*{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: cornsilk;
+
+}
+
+div.a{
+    text-align: center;
+}
+
+ul, ol{
+    list-style: none ;
+}
+.nav li a {
+
+    background-color:burlywood;
+    text-decoration: none;
+    color:#fff;
+    width: 70px;
+    border-radius: 6px;
+    padding: 8px ;
+    display: block;
+    border-color:gray;
+    border-style:groove;
+}
+.nav li a:hover {
+    background-color: darkgray;
+}
+
+
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width:1px;
+
+}
+.nav li:hover > ul{
+    display: block;
+
+}
+
+.lev li a {
+    background-color:burlywood;
+    border-radius: 6px;
+    color:#fff;
+    width: 70px;
+    text-decoration: none;
+    padding: 8px ;
+    margin:0px;
+    display: block;
+    border-color:gray;
+    border-style:groove;
+
+}
+.lev li a:hover {
+    background-color:darkgray;
+}
+
+.lev > li{
+    float:left,
+}
+.lev li ul{
+    display: none;
+    position: absolute;
+    min-width: 1px;
+
+}
+.lev li:hover > ul{
+    display: block;
+
+}
+
+ul{
+    background:cornsilk;
+    text-align: center;
+}
+li{
+    display: inline-block;
+
+    color: white;
+    margin-right: 0px;
+}
+
+.boton{
+    text-decoration: none;
+    font-weight: 70;
+    font-size: 15px;
+    color:black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:5px;
+    padding-right: 5px;
+    background-color:white;
+    border-radius: 5px;
+    border-color: rgb(141, 136, 136);
+    border-style: solid;
+}
+.redondeado{
+    border-radius: 8px;
+    background-color: rgb(253, 251, 255);
+}
