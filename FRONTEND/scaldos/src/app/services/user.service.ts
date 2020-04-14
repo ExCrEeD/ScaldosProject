@@ -38,6 +38,7 @@ export class UserService {
   public getUserName() {
     return this.currentUser.Name;
   }
+
   public getRol() {
     return this.currentUser.Rol;
   }
