@@ -1,0 +1,92 @@
+<div>
+  <div class="d-flex">
+    <div
+      id="menu-v-lateral"
+      class="col-md-1 px-0 d-none d-md-block position-fixed h-100"
+      style="z-index: 9999;"
+    >
+      <div class="mb-3 pt-3 pb-2 px-1">
+        <div class="text-center">
+          <div class="row"></div>
+          <div class="user-block">
+            <img
+              class="rounded-circle"
+              src="https://picsum.photos/200/300"
+              alt="User Image"
+              style="height: 150px;"
+            />
+          </div>
+
+          <p class="text-center mb-0 small text-12 text-f5">{{ user }}</p>
+        </div>
+      </div>
+      <div>
+        <div class="text-center">
+          <button
+            class="uk-button px-4 py-3 btn-block btn-d-menu"
+            (click)="navigateComponent('CrearGrupo')"
+          >
+            <p class="text-center"><i class="fab fa-vimeo fa-2x"></i></p>
+            <p class="text-center mb-0 small">Crear grupo</p>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="text-center">
+          <button
+            class="uk-button px-4 py-3 btn-block btn-d-menu"
+            (click)="navigateComponent('DeleteAccount')"
+          >
+            <p class="text-center"><i class="fas fa-user-minus fa-2x"></i></p>
+            <p class="text-center mb-0 small">Borrar usuario</p>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="text-center position-relative">
+          <button
+            class="uk-button px-4 py-3 btn-block btn-d-menu"
+            type="button"
+          >
+            <p class="text-center"><i class="fas fa-cog fa-2x"></i></p>
+            <p class="text-center mb-0 small">Configurar</p>
+          </button>
+          <div
+            uk-dropdown="pos: right-center"
+            top="0"
+            class="p-3 ml-1 btn-d-menu"
+          >
+            <ul class="uk-nav uk-dropdown-nav">
+              <li class="uk-text-left">
+                <a (click)="navigateComponent('CambiarClave')"
+                  ><i class="fas fa-key mr-2"></i> Cambiar clave</a
+                >
+              </li>
+              <li class="uk-text-left">
+                <a (click)="navigateComponent('ActualizarDatos')"
+                  ><i class="fas fa-user-edit mr-2"></i> Actualizar datos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-center">
+          <button
+            class="uk-button px-4 py-3 btn-block btn-d-menu"
+            (click)="signOut()"
+          >
+            <p class="text-center"><i class="fas fa-power-off fa-2x"></i></p>
+            <p class="text-center mb-0 small">Cerrar sesión</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 px-0 offset-md-1 col-md-11">
+      <div>
+        <app-create-group *ngIf="showCreateGroup"></app-create-group>
+      </div>
+    </div>
+  </div>
+</div>

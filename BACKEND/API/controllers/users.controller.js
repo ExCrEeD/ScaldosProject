@@ -9,6 +9,7 @@ export const newUser = async (req, res) => {
     Name: req.body.Name,
     Email: req.body.Email,
     Password: req.body.Password,
+    Rol: req.body.Rol,
   });
 
   db.once("open", () => {
@@ -26,11 +27,12 @@ export const login = async (req, res) => {
     Password: req.body.Password,
   });
   MongoConection();
-  Users.findOne({ Name: userlogin.Name }, (err, user) => {
+  Users.findOne({ Email: userlogin.Email }, (err, user) => {
     if (err) return handleError(err);
     console.log(user);
-    if (user == null) return res.json("usuario y/o contraseña incorrecto");
-    if (user.Password === userlogin.Password) return res.json("valido");
-    else return res.json("usuario y/o contraseña incorrecto");
+    if (user == null)
+      return res.status(400).json("usuario y/o contraseña incorrecto");
+    if (user.Password === userlogin.Password) return res.json(user);
+    else return res.status(400).json("usuario y/o contraseña incorrecto");
   });
 };
