@@ -1,0 +1,63 @@
+<div class="d-flex align-items-center justify-content-center px-md-5 px-2 mt-5 ">
+    <form
+      [formGroup]="mailForm"
+      novalidate
+      class="formLogin animated bounceInUp justify-content: center"
+    >
+      <div class="loginContent">
+        <h1 class="titleForm ">Recupera Tu Contraseña</h1>
+        <hr class="line" />
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo</label>
+          <input
+            type="text"
+            formControlName="Email"
+            name="uname"
+            class="uk-input"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Ingresa tu email"
+          />
+          <div
+            class="uk-text-danger uk-text-small pl-1 uk-padding-remove-bottom"
+            *ngIf="
+              mailForm.get('Email').hasError('required') &&
+              mailForm.get('Email').touched
+            "
+          >
+            Correo electrónico requerido
+          </div>
+          <div
+            class="uk-text-danger uk-text-small pl-1 uk-padding-remove-bottom"
+            *ngIf="
+              mailForm.get('Email').hasError('email') &&
+              mailForm.get('Email').touched
+            "
+          >
+            Ingresa un correo electrónico válido
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="mailForm.invalid"
+          class="btn btn-primary"
+          (click) = "sendMail()"
+        >
+            Enviar Correo
+        </button>
+        <hr />
+        <div class="uk-text-center">
+          <a class="uk-text-primary" (click)="this.tools.nav('RegisterUser')"
+            >Regístrate</a
+          >
+        </div>
+        <div class="uk-text-center">
+          <a class="uk-text-primary" (click)="this.tools.nav('login')"
+            >Ingresar</a
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+  
