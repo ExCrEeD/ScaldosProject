@@ -5,6 +5,7 @@ import { RegisterComponent } from "./register/register.component";
 import { RecoveryComponent } from "./recovery/recovery.component";
 import { HomeComponent } from "./home/home.component";
 import { CreateGroupComponent } from "./create-group/create-group.component";
+import { AddUserComponent } from './add-user/add-user.component';
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: "RegisterUser", component: RegisterComponent },
   { path: "Recovery", component: RecoveryComponent },
   { path: "CreateGroup", component: CreateGroupComponent },
+  { path: "AddUser", component: AddUserComponent},
   { path: "Home", component: HomeComponent },
 ];
 

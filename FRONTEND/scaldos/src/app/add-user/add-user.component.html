@@ -1,0 +1,21 @@
+<div class="d-flex align-items-center justify-content-center px-md-5 px-2 mt-5 ">
+<form [formGroup]="AddUserForm" novalidate class="">
+    <div class="form-group">
+        <p>
+            AÑADE UN USUARIO A UN GRUPO
+        </p>
+        <hr>
+        <div class="form-group">
+            <label for="Name">Nombre del Grupo:</label>
+            <input type="text" id="name" name="user_name" placeholder="Ingresa el nombre del grupo" width="200px" formControlName="Name_Group">
+        </div>
+        <div class="form-group">
+            <label for="Name">Nombre del Usuario:</label>
+            <input type="text" id="name" name="user_name" placeholder="Ingresa el nombre del usuario" width="200px" formControlName="Name_User">
+        </div>
+        <div class="button" >
+            <button type="submit" (click)="addUser()" >Añadir Usuario</button>
+        </div>
+    </div>
+</form>
+</div>
