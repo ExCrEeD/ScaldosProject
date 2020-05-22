@@ -7,6 +7,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { CharacterComponent } from './character/character.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 /* Modelos */
 import { User } from "./Model/user";
@@ -27,6 +30,9 @@ import { HomeComponent } from "./home/home.component";
     RegisterComponent,
     CreateGroupComponent,
     HomeComponent,
+    ProfileComponent,
+    CharacterComponent,
+
   ],
   imports: [
     BrowserModule,

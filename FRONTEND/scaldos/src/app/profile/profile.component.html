@@ -1,0 +1,58 @@
+
+<div>
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-6 justify-content-center mt-5 " >
+<h3>Mis Grupos Activos</h3>
+
+      <div style = "
+      background :white;
+      color : #ffffff;
+      padding : 4px;
+      width : 550px;
+      height : 480px;
+      overflow : auto; ">
+
+        <tr *ngFor="let item of Lista;let impar = odd;let par = even;" [ngClass]="{black:par,white:impar}">
+       <div class="rectangle  justify-content-center mt-4"  >
+         <tr>  <td width="325" 
+          
+          height="3">{{item}} <br /> </td></tr> 
+
+       </div>
+        </tr>
+      </div>
+      </div>
+
+
+     
+       
+    <div class="col-lg-6  justify-content-center mt-5">
+      <div class="row justify-content-center">
+        <img
+            class="rounded-circle"
+            src="https://picsum.photos/200/300"
+            alt="User Image" 
+            style = "border: solid #222d32;"   
+          />
+      </div>
+  
+      <div class="row justify-content-center ">
+        <p class="infobox-username" >{{name}}</p>
+      </div>
+      <div class="justify-content-center">
+
+        <p *ngIf ="(role=='estudiante')" class ="justify-content-center ">
+          <a href="" class=" boton">Cambiar personaje</a>
+        </p>
+        <p *ngIf ="(role=='docente')" class ="justify-content-center ">
+          <a href="" class=" justify-content-center boton">Solicitudes</a>
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+
+
+.black {
+color: white;
+}
+ 
+.white {
+color:white;
+}
+
+
+.rectangle{
+   background-color: #222d32;
+   border-radius: 10px;
+   text-align: end;
+  height: 80px;
+  width: 500px;
+}
+  .infobox-username {
+    font-size: 2em;
+    text-align: center;
+    color: black;
+  }
+  
+ .boton{
+  background-color: #666666;
+  text-decoration-color: #666666;
+  border-style: solid;
+  border-color: #666666;
+  color: #ffffff;
+  border-radius: 2px;
+  border-style: solid;
+ }
