@@ -19,6 +19,7 @@ import { GroupService } from "./Services/group.service";
 import { NavPageService } from "./Services/nav-page.service";
 import { CreateGroupComponent } from "./create-group/create-group.component";
 import { HomeComponent } from "./home/home.component";
+import { RecoveryComponent } from './recovery/recovery.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from "./home/home.component";
     RegisterComponent,
     CreateGroupComponent,
     HomeComponent,
+    RecoveryComponent,
   ],
   imports: [
     BrowserModule,
