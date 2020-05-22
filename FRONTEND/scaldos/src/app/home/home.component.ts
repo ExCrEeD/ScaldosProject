@@ -52,7 +52,9 @@ export class HomeComponent implements OnInit {
   }
 
   private loadMenu() {
+    this.menu = new Menu();
     let rol = this.userService.getRol();
+    console.log(rol);
     if (rol == "Admin") {
       this.menu.RegisterTeacher = true;
     }

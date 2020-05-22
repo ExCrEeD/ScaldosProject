@@ -28,9 +28,13 @@
           <p class="text-center mb-0 small text-12 text-f5">{{ user }}</p>
         </div>
       </div>
+<<<<<<< HEAD
       <div>
         
         
+=======
+      <div *ngIf="menu.CreateGroup">
+>>>>>>> 474769626eb8a42a106e45126b85f481abcd4f5d
         <div class="text-center">
           <button
             class="uk-button px-4 py-3 btn-block btn-d-menu"
@@ -41,17 +45,21 @@
           </button>
         </div>
       </div>
+<<<<<<< HEAD
       <div>
 
 
 
+=======
+      <div *ngIf="menu.RegisterTeacher">
+>>>>>>> 474769626eb8a42a106e45126b85f481abcd4f5d
         <div class="text-center">
           <button
             class="uk-button px-4 py-3 btn-block btn-d-menu"
-            (click)="navigateComponent('DeleteAccount')"
+            (click)="navigateComponent('RegistrarProfesor')"
           >
             <p class="text-center"><i class="fas fa-user-minus fa-2x"></i></p>
-            <p class="text-center mb-0 small">Borrar usuario</p>
+            <p class="text-center mb-0 small">Crear Profesor</p>
           </button>
         </div>
       </div>
@@ -98,8 +106,13 @@
     </div>
     <div class="col-12 px-0 offset-md-1 col-md-11">
       <div>
+<<<<<<< HEAD
         <app-create-group  *ngIf="showCreateGroup"></app-create-group>
         <app-profile *ngIf="showProfile"></app-profile>
+=======
+        <app-create-group *ngIf="showCreateGroup"></app-create-group>
+        <app-register *ngIf="showRegisterTeacher"></app-register>
+>>>>>>> 474769626eb8a42a106e45126b85f481abcd4f5d
       </div>
     </div>
   </div>
