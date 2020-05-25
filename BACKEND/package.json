@@ -18,12 +18,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-<<<<<<< HEAD
-    "mongoose": "^5.9.13",
-=======
     "mongoose": "^5.9.4",
     "nodemailer": "^6.4.6",
->>>>>>> 474769626eb8a42a106e45126b85f481abcd4f5d
     "nodemon": "^2.0.3"
   }
 }
