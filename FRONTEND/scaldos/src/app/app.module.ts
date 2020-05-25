@@ -31,13 +31,9 @@ import { RecoveryComponent } from './recovery/recovery.component';
     RegisterComponent,
     CreateGroupComponent,
     HomeComponent,
-<<<<<<< HEAD
     ProfileComponent,
     CharacterComponent,
-
-=======
     RecoveryComponent,
->>>>>>> 474769626eb8a42a106e45126b85f481abcd4f5d
   ],
   imports: [
     BrowserModule,
