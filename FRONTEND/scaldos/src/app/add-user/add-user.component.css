@@ -1,6 +1,6 @@
 form{
     /* Centrar el formulario en la página */
-    margin: auto auto auto auto;
+    margin: 0px auto;    
     width: 400px;
     /* Esquema del formulario */
     padding: 1em;
