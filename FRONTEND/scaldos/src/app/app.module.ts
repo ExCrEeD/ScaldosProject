@@ -7,14 +7,14 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { CharacterComponent } from './character/character.component';
-import { ProfileComponent } from './profile/profile.component';
-
+import { CharacterComponent } from "./character/character.component";
+import { ProfileComponent } from "./profile/profile.component";
 
 /* Modelos */
 import { User } from "./Model/user";
 import { Group } from "./Model/group";
 import { Menu } from "./Model/Menu";
+import { Recompensa } from "./Model/recompensa";
 
 /* Servicios */
 import { UserService } from "./Services/user.service";
@@ -22,7 +22,9 @@ import { GroupService } from "./Services/group.service";
 import { NavPageService } from "./Services/nav-page.service";
 import { CreateGroupComponent } from "./create-group/create-group.component";
 import { HomeComponent } from "./home/home.component";
-import { RecoveryComponent } from './recovery/recovery.component';
+import { RecoveryComponent } from "./recovery/recovery.component";
+import { RecompensasComponent } from "./recompensas/recompensas.component";
+import { RecompensasService } from "./Services/recompensas.service";
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { RecoveryComponent } from './recovery/recovery.component';
     ProfileComponent,
     CharacterComponent,
     RecoveryComponent,
+    RecompensasComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,16 @@ import { RecoveryComponent } from './recovery/recovery.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [User, Group, Menu, NavPageService, UserService, GroupService],
+  providers: [
+    User,
+    Group,
+    Menu,
+    Recompensa,
+    NavPageService,
+    UserService,
+    GroupService,
+    RecompensasService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

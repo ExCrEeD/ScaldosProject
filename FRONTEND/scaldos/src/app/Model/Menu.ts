@@ -3,4 +3,5 @@ export class Menu {
   Rol: string;
   RegisterTeacher: boolean;
   CreateGroup: boolean;
+  Recompensas: boolean;
 }

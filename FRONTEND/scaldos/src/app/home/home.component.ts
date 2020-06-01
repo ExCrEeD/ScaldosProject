@@ -11,8 +11,9 @@ import { Menu } from "src/app/Model/Menu";
 export class HomeComponent implements OnInit {
   public showRegisterTeacher = false;
   public showCreateGroup = false;
-  public showProfile=false;
-  public showCharater = false; 
+  public showProfile = false;
+  public showCharater = false;
+  public showRecompensas = false;
 
   public user;
   public menu: Menu;
@@ -28,8 +29,9 @@ export class HomeComponent implements OnInit {
   public navigateComponent(componente) {
     this.showRegisterTeacher = false;
     this.showCreateGroup = false;
-    this.showProfile= false;
-    this.showCharater=false; 
+    this.showProfile = false;
+    this.showCharater = false;
+    this.showRecompensas = false;
 
     switch (componente) {
       case "CrearGrupo": {
@@ -40,12 +42,16 @@ export class HomeComponent implements OnInit {
         this.showRegisterTeacher = true;
         break;
       }
-      case "Prof":{
+      case "ActualizarDatos": {
         this.showProfile = true;
         break;
       }
-      case "Character":{
+      case "Character": {
         this.showCharater = true;
+        break;
+      }
+      case "CrearRecompensas": {
+        this.showRecompensas = true;
         break;
       }
     }
@@ -59,6 +65,10 @@ export class HomeComponent implements OnInit {
       this.menu.RegisterTeacher = true;
     }
     if (rol == "Teacher") {
+      this.menu.CreateGroup = true;
+      this.menu.Recompensas = true;
+    }
+    if (rol == "Student") {
       this.menu.CreateGroup = true;
     }
   }

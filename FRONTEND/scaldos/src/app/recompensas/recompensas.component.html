@@ -1,0 +1,63 @@
+<div>
+  <div
+    style="
+      background: white;
+      color: #ffffff;
+      padding: 4px;
+      width: 550px;
+      height: 480px;
+      overflow: auto;
+      float: left;
+    "
+  >
+    <tr
+      *ngFor="
+        let xrecompensa of allRecompensas$ | async;
+        let impar = odd;
+        let par = even
+      "
+    >
+      <div class="rectangle justify-content-center mt-4">
+        <tr>
+          <td width="325" height="2">
+            {{ xrecompensa.Nombre }}- {{ xrecompensa.Valor }}<br />
+          </td>
+        </tr>
+      </div>
+    </tr>
+  </div>
+  <div style="float: right;">
+    <form [formGroup]="RecompensaForm" novalidate class="animated bounceInDown">
+      <div class="form-group">
+        <p>
+          Crear Recompensa
+        </p>
+        <hr />
+        <div class="form-group">
+          <label for="Nombre">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="user_name"
+            placeholder="Ingresa el nombre de la recompensa"
+            width="200px"
+            formControlName="Nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Valor">Valor:</label>
+          <textarea
+            id="msg"
+            name="user_message"
+            formControlName="Valor"
+          ></textarea>
+        </div>
+        <div class="button">
+          <button type="submit" (click)="crearRecompensa()">
+            Crear Recompensa
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import userRoute from "./routes/users.route";
 import groupRoute from "./routes/groups.route";
 import missionRoute from "./routes/missions.route";
 import mailRoute from "./routes/mail.route";
+import recompensasRoute from "./routes/recompensas.route";
 
 const app = express();
 app.use(bodyParser.json());
@@ -22,6 +23,7 @@ app.use("/users", userRoute);
 app.use("/groups", groupRoute);
 app.use("/missions", missionRoute);
 app.use("/mail", mailRoute);
+app.use("/recompensas", recompensasRoute);
 
 app.listen(app.get("port"), () => {
   console.log("scaldos server on port", app.get("port"));
