@@ -4,4 +4,5 @@ export class Menu {
   RegisterTeacher: boolean;
   CreateGroup: boolean;
   Recompensas: boolean;
+  AddUser: boolean;
 }

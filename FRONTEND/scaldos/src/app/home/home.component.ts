@@ -75,6 +75,7 @@ export class HomeComponent implements OnInit {
     if (rol == "Teacher") {
       this.menu.CreateGroup = true;
       this.menu.Recompensas = true;
+      this.menu.AddUser = true;
     }
     if (rol == "Student") {
       this.menu.CreateGroup = true;

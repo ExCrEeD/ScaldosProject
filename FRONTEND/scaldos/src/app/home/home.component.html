@@ -50,11 +50,10 @@
           </button>
         </div>
       </div>
-      <div *ngIf="menu.RegisterTeacher">
+      <div *ngIf="menu.AddUser">
         <div class="text-center">
           <button
             class="uk-button px-4 py-3 btn-block btn-d-menu"
-
             (click)="navigateComponent('AddUser')"
           >
             <p class="text-center"><i class="fab fa-vimeo fa-2x"></i></p>
@@ -67,9 +66,7 @@
           <button
             class="uk-button px-4 py-3 btn-block btn-d-menu"
             (click)="navigateComponent('DeleteAccount')"
-
             (click)="navigateComponent('RegistrarProfesor')"
-
           >
             <p class="text-center"><i class="fas fa-user-minus fa-2x"></i></p>
             <p class="text-center mb-0 small">Crear Profesor</p>
@@ -122,8 +119,6 @@
         <app-create-group *ngIf="showCreateGroup"></app-create-group>
         <app-profile *ngIf="showProfile"></app-profile>
         <app-recompensas *ngIf="showRecompensas"></app-recompensas>
-      </div>
-      <div>
         <app-add-user *ngIf="showAddUser"></app-add-user>
       </div>
     </div>
