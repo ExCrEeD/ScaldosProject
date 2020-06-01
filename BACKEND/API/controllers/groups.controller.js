@@ -1,15 +1,15 @@
-import mongoose from "mongoose";
 import Groups from "../models/groups";
 import Group_Users from "../models/group_users";
 import User from "../models/users";
 import { mongoPath, mongoDb } from "../../env";
+
 import { MongoConection } from "../database/mongoConection";
 
 export const newGroup = async (req, res) => {
   var db = MongoConection();
   var group = new Groups({
-    Name: req.body.Name   , 
-    Description : req.body.Description
+    Name: req.body.Name,
+    Description: req.body.Description,
   });
 
   db.once("open", () => {
@@ -19,6 +19,7 @@ export const newGroup = async (req, res) => {
     });
   });
 };
+
 
 export const addUserToGroup = async (req,res) => {
     var db = MongoConection();
@@ -34,3 +35,4 @@ export const addUserToGroup = async (req,res) => {
       });
     });
 };
+

@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   public showRegisterTeacher = false;
   public showCreateGroup = false;
   public showAddUser = false;
+  public showProfile=false;
+  public showCharater = false; 
+
 
   public user;
   public menu: Menu;
@@ -28,6 +31,9 @@ export class HomeComponent implements OnInit {
     this.showRegisterTeacher = false;
     this.showCreateGroup = false;
     this.showAddUser= false;
+    this.showProfile= false;
+    this.showCharater=false; 
+
 
     switch (componente) {
       case "CrearGrupo": {
@@ -42,11 +48,21 @@ export class HomeComponent implements OnInit {
         this.showRegisterTeacher = true;
         break;
       }
+      case "Prof":{
+        this.showProfile = true;
+        break;
+      }
+      case "Character":{
+        this.showCharater = true;
+        break;
+      }
     }
   }
 
   private loadMenu() {
+    this.menu = new Menu();
     let rol = this.userService.getRol();
+    console.log(rol);
     if (rol == "Admin") {
       this.menu.RegisterTeacher = true;
     }

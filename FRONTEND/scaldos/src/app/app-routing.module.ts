@@ -6,6 +6,9 @@ import { RecoveryComponent } from "./recovery/recovery.component";
 import { HomeComponent } from "./home/home.component";
 import { CreateGroupComponent } from "./create-group/create-group.component";
 import { AddUserComponent } from './add-user/add-user.component';
+import { ProfileComponent } from "./profile/profile.component";
+import { CharacterComponent } from "./character/character.component"; 
+
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -15,6 +18,9 @@ const routes: Routes = [
   { path: "CreateGroup", component: CreateGroupComponent },
   { path: "AddUser", component: AddUserComponent},
   { path: "Home", component: HomeComponent },
+  { path: "Prof", component: ProfileComponent },
+  { path: "Character", component: CharacterComponent },
+
 ];
 
 @NgModule({
