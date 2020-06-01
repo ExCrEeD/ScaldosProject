@@ -22,4 +22,10 @@ export class GroupService {
       headers: this.headers
     });
   }
+
+  public addUserToGroup(info){
+    return this.http.post(this.accessPointUrl+"/addUser",info,{
+      headers: this.headers
+    });
+  }
 }

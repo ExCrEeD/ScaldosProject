@@ -11,8 +11,10 @@ import { Menu } from "src/app/Model/Menu";
 export class HomeComponent implements OnInit {
   public showRegisterTeacher = false;
   public showCreateGroup = false;
+  public showAddUser = false;
   public showProfile=false;
   public showCharater = false; 
+
 
   public user;
   public menu: Menu;
@@ -28,12 +30,18 @@ export class HomeComponent implements OnInit {
   public navigateComponent(componente) {
     this.showRegisterTeacher = false;
     this.showCreateGroup = false;
+    this.showAddUser= false;
     this.showProfile= false;
     this.showCharater=false; 
+
 
     switch (componente) {
       case "CrearGrupo": {
         this.showCreateGroup = true;
+        break;
+      }
+      case "AddUser": {
+        this.showAddUser = true;
         break;
       }
       case "RegistrarProfesor": {

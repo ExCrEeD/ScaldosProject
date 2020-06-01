@@ -1,8 +1,10 @@
 import express from "express";
-import { newGroup } from "../controllers/groups.controller";
+import { newGroup, addUserToGroup } from "../controllers/groups.controller";
 
 var router = express.Router();
 
 router.post("/newGroup", newGroup);
+
+router.post("/addUser", addUserToGroup);
 
 export default router;
