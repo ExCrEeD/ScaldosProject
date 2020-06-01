@@ -22,9 +22,10 @@ import { GroupService } from "./Services/group.service";
 import { NavPageService } from "./Services/nav-page.service";
 import { CreateGroupComponent } from "./create-group/create-group.component";
 import { HomeComponent } from "./home/home.component";
-import { RecoveryComponent } from "./recovery/recovery.component";
 import { RecompensasComponent } from "./recompensas/recompensas.component";
 import { RecompensasService } from "./Services/recompensas.service";
+import { RecoveryComponent } from "./recovery/recovery.component";
+import { AddUserComponent } from "./add-user/add-user.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { RecompensasService } from "./Services/recompensas.service";
     CharacterComponent,
     RecoveryComponent,
     RecompensasComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,

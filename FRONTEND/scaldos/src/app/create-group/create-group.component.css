@@ -4,6 +4,7 @@ form{
         width: 400px;
         /* Esquema del formulario */
         padding: 1em;
+
         border: 2px solid rgb(119, 118, 118);
         border-radius: 1em;    
         background-color: #D4CECE; 
@@ -60,7 +61,6 @@ textarea {
   /* Alinear los botones con los campos de texto */
   padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
 }
-
 button {
   /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
   entre las etiquetas y sus campos de texto */

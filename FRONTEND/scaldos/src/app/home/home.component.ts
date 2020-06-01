@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public showProfile = false;
   public showCharater = false;
   public showRecompensas = false;
+  public showAddUser = false;
 
   public user;
   public menu: Menu;
@@ -32,10 +33,17 @@ export class HomeComponent implements OnInit {
     this.showProfile = false;
     this.showCharater = false;
     this.showRecompensas = false;
+    this.showAddUser = false;
+    this.showProfile = false;
+    this.showCharater = false;
 
     switch (componente) {
       case "CrearGrupo": {
         this.showCreateGroup = true;
+        break;
+      }
+      case "AddUser": {
+        this.showAddUser = true;
         break;
       }
       case "RegistrarProfesor": {
